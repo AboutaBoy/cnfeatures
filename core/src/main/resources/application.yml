@@ -1,0 +1,37 @@
+system:
+  version:
+    number: 0.0.1-SNAPSHOT
+
+# https://www.tuicool.com/articles/muE3umB ヾ(｡｀Д´｡) 关于update/insert/delete操作返回int的问题,是返回的操作行数还是受影响行数.
+# 目前使用h2内存数据库
+spring:
+  datasource:
+    url: "${DATASOURCE_URL:jdbc:47.95.221.181:5432/postgres?useAffectedRows=true}"
+    username: "${DATASOURCE_USERNAME:postgres}"
+    password: "${DATASOURCE_PASSWORD:lzp@2012}"
+    driver-class-name: org.postgresql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    #schema: "classpath*:/data/*.xml" #创建数据库表sql语句
+    #data: "classpath*:/data/*.xml" #插入数据库表数据XML
+  h2:
+    console:
+      enabled: true
+
+mybatis:
+  config-location: "classpath:mybatis-config.xml"
+  mapper-locations: "classpath*:/mapper/*.xml"
+  type-aliases-package: "tk.mybatis.mapper.entity"
+
+mapper:
+  mappers: "tk.mybatis.mapper.common.Mapper"
+  not-empty: false
+  identity: POSTGRESQL
+
+pagehelper:
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+
+
+
+

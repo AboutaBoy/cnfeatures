@@ -1,0 +1,8 @@
+include 'core'
+include 'common'
+include 'security'
+include 'security:security'
+findProject(':security:security')?.name = 'security'
+include 'security:shiro'
+findProject(':security:shiro')?.name = 'shiro'
+

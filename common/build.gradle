@@ -1,0 +1,16 @@
+
+dependencies {
+
+    // spring framework
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-autoconfigure"
+
+    // ORM框架mybatis
+    compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}"
+    // mybatis分页插件
+    compile "com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelperSpringBootVersion}"
+    // mybatis mapper插件
+    compile "tk.mybatis:mapper-spring-boot-starter:${mapperSpringBootVersion}"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

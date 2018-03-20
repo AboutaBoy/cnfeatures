@@ -1,0 +1,76 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+        dependencyManagementVersion = '1.0.3.RELEASE'
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+    }
+    dependencies {
+        // Spring Boot Gradle插件在Gradle中提供Spring Boot支持，允许您打包可执行的jar或war档案，
+        // 运行Spring Boot应用程序并使用spring-boot-dependencies提供的依赖管理。
+        // https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-gradle-plugin.html
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        // 提供类似 Maven 的依赖项管理和排除的 Gradle 插件。
+        // 根据配置的依赖项管理元数据, 插件将控制项目的直接和可传递依赖项的版本, 并遵守项目依赖项中声明的任何排除。
+        // https://github.com/spring-gradle-plugins/dependency-management-plugin
+        classpath("io.spring.gradle:dependency-management-plugin:${dependencyManagementVersion}")
+    }
+
+}
+
+subprojects {
+
+    group 'cn.features'
+    version '1.0-SNAPSHOT'
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'org.springframework.boot'
+
+    sourceCompatibility = 1.9
+    targetCompatibility = 1.9
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    // 远程仓库设置为阿里
+    repositories {
+        // 如果存在maven本地仓库,优先使用maven仓库的包,没有才下载
+        mavenLocal()
+        maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
+    }
+    ext {
+        mybatisVersion = '1.3.0'
+        swaggerVersion = '2.7.0'
+        lombokVersion = '1.16.16'
+        druidVersion = '1.1.2'
+        pagehelperSpringBootVersion = '1.2.1'
+        mapperSpringBootVersion = '1.1.4'
+    }
+
+    dependencyManagement {
+        imports {
+            // 导入 spring-boot-dependencies pom 文件
+            // 该 pom 文件中定义了很多依赖，我们在子工程可以不用加入依赖的版本号
+            // 因为 spring-boot 发行版本是经过很多次测试的，我们在自己工程中，尽量使用 spring-boot 定义
+            // 的依赖版本号，减少不必要的冲突问题
+            // https://github.com/spring-projects/spring-boot/blob/1.5.x/spring-boot-dependencies/pom.xml
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+        }
+    }
+
+
+    idea {
+        module {
+            // 运行 gradle idea 可以下载依赖包的源码和Javadoc文档
+            downloadJavadoc = true
+            downloadSources = true
+        }
+    }
+
+}

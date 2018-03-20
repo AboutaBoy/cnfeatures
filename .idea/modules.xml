@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/cnfeatures.iml" filepath="$PROJECT_DIR$/.idea/modules/cnfeatures.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/cnfeatures-security.iml" filepath="$PROJECT_DIR$/.idea/modules/security/cnfeatures-security.iml" group="security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/cnfeatures-security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/security/cnfeatures-security_main.iml" group="security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/cnfeatures-security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/security/cnfeatures-security_test.iml" group="security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common.iml" filepath="$PROJECT_DIR$/.idea/modules/common.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_main.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_test.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core.iml" filepath="$PROJECT_DIR$/.idea/modules/core.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/core/core_main.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/core/core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/core/core_test.iml" group="core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security.iml" filepath="$PROJECT_DIR$/.idea/modules/security.iml" group="security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/security/security-security.iml" filepath="$PROJECT_DIR$/.idea/modules/security/security/security-security.iml" group="security/security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/security/security-security_main.iml" filepath="$PROJECT_DIR$/.idea/modules/security/security/security-security_main.iml" group="security/security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/security/security-security_test.iml" filepath="$PROJECT_DIR$/.idea/modules/security/security/security-security_test.iml" group="security/security" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shiro.iml" filepath="$PROJECT_DIR$/.idea/modules/shiro.iml" group="security/shiro" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/shiro/shiro_main.iml" filepath="$PROJECT_DIR$/.idea/modules/security/shiro/shiro_main.iml" group="security/shiro" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/security/shiro/shiro_test.iml" filepath="$PROJECT_DIR$/.idea/modules/security/shiro/shiro_test.iml" group="security/shiro" />
+    </modules>
+  </component>
+</project>

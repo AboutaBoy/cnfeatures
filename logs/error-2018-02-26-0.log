@@ -1,0 +1,40 @@
+2018-02-26 15:19:16 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.
+2018-02-26 15:28:03 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.
+2018-02-26 15:30:28 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.
+2018-02-26 15:30:30 [WARN][main][o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:551]: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'anyUserDetailServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.features.common.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-02-26 15:30:30 [ERROR][main][o.s.b.d.LoggingFailureAnalysisReporter:42]: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in cn.features.security.service.impl.AnyUserDetailServiceImpl required a bean of type 'cn.features.common.service.UserService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'cn.features.common.service.UserService' in your configuration.
+
+2018-02-26 15:32:02 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.
+2018-02-26 15:32:04 [WARN][main][o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext:551]: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'anyUserDetailServiceImpl': Unsatisfied dependency expressed through field 'userService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.features.common.service.UserService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2018-02-26 15:32:04 [ERROR][main][o.s.b.d.LoggingFailureAnalysisReporter:42]: 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userService in cn.features.security.service.impl.AnyUserDetailServiceImpl required a bean of type 'cn.features.common.service.UserService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'cn.features.common.service.UserService' in your configuration.
+
+2018-02-26 15:33:28 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.
+2018-02-26 15:39:02 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.
+2018-02-26 15:40:42 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.
+2018-02-26 15:41:21 [WARN][main][o.m.s.mapper.ClassPathMapperScanner:166]: No MyBatis mapper was found in '[cn.features]' package. Please check your configuration.

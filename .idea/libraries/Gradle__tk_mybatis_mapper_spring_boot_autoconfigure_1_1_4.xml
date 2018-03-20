@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: tk.mybatis:mapper-spring-boot-autoconfigure:1.1.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/tk.mybatis/mapper-spring-boot-autoconfigure/1.1.4/619d31c8174f37b5a49612b4756e9eb8a851ddd5/mapper-spring-boot-autoconfigure-1.1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/tk.mybatis/mapper-spring-boot-autoconfigure/1.1.4/f3b9e6dae89ef0894f041555b9fb0afa752a4a33/mapper-spring-boot-autoconfigure-1.1.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/tk.mybatis/mapper-spring-boot-autoconfigure/1.1.4/1b51f1df0426017b2326d677430c629b6af17bf0/mapper-spring-boot-autoconfigure-1.1.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

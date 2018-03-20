@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--更多配置自己看 ヾ(｡｀Д´｡) : http://www.mybatis.org/mybatis-3/configuration.html-->
+
+    <settings>
+
+        <!-- 设置驱动程序等待数据库响应秒数 -->
+        <setting name="defaultStatementTimeout" value="3000"/>
+        <!-- 数据库列名驼峰式命名属性映射对应的属性-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--全局启用或禁用延迟加载。启用时，所有关系都将被延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
+
+
+    <typeAliases>
+        <package name="cn.features.model"/>
+    </typeAliases>
+
+
+</configuration>
