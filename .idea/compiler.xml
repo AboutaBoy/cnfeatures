@@ -15,6 +15,12 @@
       <module name="core_test" target="1.9" />
       <module name="entity_main" target="1.9" />
       <module name="entity_test" target="1.9" />
+      <module name="orm_main" target="1.9" />
+      <module name="orm_test" target="1.9" />
+      <module name="permissions-shiro_main" target="1.9" />
+      <module name="permissions-shiro_test" target="1.9" />
+      <module name="permissions_main" target="1.9" />
+      <module name="permissions_test" target="1.9" />
       <module name="security-security_main" target="1.9" />
       <module name="security-security_test" target="1.9" />
       <module name="security_main" target="1.9" />

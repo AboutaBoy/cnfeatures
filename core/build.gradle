@@ -5,8 +5,7 @@ description = "主程序入口模块"
 
 dependencies {
     compile project(':common')
-    compile project(':security:security')
-
+    compile project(':permissions')
     // spring framework
     compile "org.springframework.boot:spring-boot-starter-mobile"
     // swagger config for API UI
@@ -17,8 +16,6 @@ dependencies {
     compile "org.postgresql:postgresql"
     compile "com.alibaba:druid:${druidVersion}"
 
-    // tools
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
 
     //test
     testCompile group: 'junit', name: 'junit', version: '4.12'

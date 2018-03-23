@@ -1,3 +1,6 @@
 dependencies {
+
+    compile project(':permissions:security')
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

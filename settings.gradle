@@ -1,8 +1,8 @@
 include 'core'
 include 'common'
-include 'security'
-include 'security:security'
-findProject(':security:security')?.name = 'security'
-include 'security:shiro'
-findProject(':security:shiro')?.name = 'shiro'
+include 'permissions'
+include 'permissions:security'
+findProject(':permissions:security')?.name = 'security'
+include 'permissions:shiro'
+findProject(':permissions:shiro')?.name = 'shiro'
 
