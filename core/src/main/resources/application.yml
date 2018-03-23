@@ -6,16 +6,11 @@ system:
 # 目前使用h2内存数据库
 spring:
   datasource:
-    url: "${DATASOURCE_URL:jdbc:47.95.221.181:5432/postgres?useAffectedRows=true}"
+    url: "${DATASOURCE_URL:jdbc:localhost:5432/features?useAffectedRows=true}"
     username: "${DATASOURCE_USERNAME:postgres}"
-    password: "${DATASOURCE_PASSWORD:lzp@2012}"
+    password: "${DATASOURCE_PASSWORD:test}"
     driver-class-name: org.postgresql.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    #schema: "classpath*:/data/*.xml" #创建数据库表sql语句
-    #data: "classpath*:/data/*.xml" #插入数据库表数据XML
-  h2:
-    console:
-      enabled: true
 
 mybatis:
   config-location: "classpath:mybatis-config.xml"

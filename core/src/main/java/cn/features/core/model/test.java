@@ -5,7 +5,7 @@ import lombok.Data;
 import org.apache.ibatis.type.Alias;
 
 @Data
-@Alias("")
+@Alias("test")
 public class test {
     private String id;
     private String name;

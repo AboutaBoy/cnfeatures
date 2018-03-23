@@ -23,10 +23,10 @@
 
     <!--输出全部日志-->
     <appender name ="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>features.log</file>
+        <file>${log_path}/features.log</file>
         <!--按天分割日志-->
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <FileNamePattern>${log_path}/features-{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <FileNamePattern>${log_path}/features-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
             <maxFileSize>${max_file_size}</maxFileSize>
             <maxHistory>${max_history}</maxHistory>
             <totalSizeCap>${total_size_cap}</totalSizeCap>
@@ -38,8 +38,8 @@
 
     <!--输出错误日志-->
     <appender name ="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>features_error.log</file>
-        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+        <file>${log_path}/features_error.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>ERROR</level>
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
@@ -51,7 +51,7 @@
         </filter>
         <!--按天分割日志-->
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <FileNamePattern>${log_path}/features-{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <FileNamePattern>${log_path}/features_error-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
             <maxFileSize>${max_file_size}</maxFileSize>
             <maxHistory>${max_history}</maxHistory>
             <totalSizeCap>${total_size_cap}</totalSizeCap>
