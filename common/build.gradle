@@ -1,8 +1,9 @@
 
 dependencies {
 
-    // spring framework
+    // spring framework 支持全栈式Web开发，包括Tomcat和spring-webmvc
     compile "org.springframework.boot:spring-boot-starter-web"
+    //自动配置,手动写Java配置文件时@Configuration等等来表示
     compile "org.springframework.boot:spring-boot-autoconfigure"
 
     // logback

@@ -5,6 +5,12 @@
       <profile default="true" name="Default" enabled="true" />
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="authorization-authorization_main" target="1.9" />
+      <module name="authorization-authorization_test" target="1.9" />
+      <module name="authorization-security_main" target="1.9" />
+      <module name="authorization-security_test" target="1.9" />
+      <module name="authorization_main" target="1.9" />
+      <module name="authorization_test" target="1.9" />
       <module name="cnfeatures-security_main" target="1.9" />
       <module name="cnfeatures-security_test" target="1.9" />
       <module name="cnfeatures_main" target="1.8" />
@@ -29,6 +35,8 @@
       <module name="shiro_test" target="1.9" />
       <module name="swagger_main" target="1.9" />
       <module name="swagger_test" target="1.9" />
+      <module name="transit_main" target="1.9" />
+      <module name="transit_test" target="1.9" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -10,11 +10,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/authorization" />
+            <option value="$PROJECT_DIR$/authorization/authorization-transit" />
+            <option value="$PROJECT_DIR$/authorization/security" />
+            <option value="$PROJECT_DIR$/authorization/shiro" />
             <option value="$PROJECT_DIR$/common" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/permissions" />
-            <option value="$PROJECT_DIR$/permissions/security" />
-            <option value="$PROJECT_DIR$/permissions/shiro" />
           </set>
         </option>
       </GradleProjectSettings>

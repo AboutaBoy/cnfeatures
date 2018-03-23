@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.features.security.dao.UserDao">
+
+    <sql id="userTable">
+        id, name
+    </sql>
+
+    <select id="listUserByGroup" resultType="user">
+        SELECT
+          <include refid="userTable"/>
+        FROM
+          sys.user AS u
+        JOIN
+          sys.user_group AS ug ON u.id = ug.user_id
+        WHERE
+        group_id = #{userGroup}
+    </select>
+</mapper>
