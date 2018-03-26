@@ -5,6 +5,6 @@ include 'authorization:security'
 findProject(':authorization:security')?.name = 'security'
 include 'authorization:shiro'
 findProject(':permissions:shiro')?.name = 'shiro'
-include 'authorization:authorization-transit'
-findProject(':authorization:authorization-transit')?.name = 'transit'
+include 'authorization:transit'
+findProject(':authorization:transit')?.name = 'transit'
 

@@ -19,6 +19,9 @@
 
     <typeAliases>
         <package name="cn.features.model"/>
+        <package name="cn.features.security.model"/>
+        <package name="cn.features.security.vo"/>
+        <package name="cn.features.security.po"/>
     </typeAliases>
 
 

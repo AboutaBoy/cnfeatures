@@ -1,0 +1,18 @@
+stages:
+- build
+
+dist:
+  stage: build
+  image: tolbkni/openjdk:8-jdk-alpine
+  artifacts:
+    expire_in: 2 weeks
+    paths:
+      - entry/build/libs/
+    name: cnfeatures
+  cache:
+    untracked: true
+    paths:
+      - .gradle/
+  script:
+    - GRADLE_OPTS="-Dgradle.user.home=.gradle $GRADLE_OPTS" ./gradlew clean build
+    

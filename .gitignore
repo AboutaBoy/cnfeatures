@@ -1,0 +1,22 @@
+.gradle
+build/
+out/
+target/
+!gradle/wrapper/gradle-wrapper.jar
+
+# wrapper file
+*.zip
+*.rar
+*.tar.gz
+
+## log file
+*.log
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+# mac file
+.DS_Store
