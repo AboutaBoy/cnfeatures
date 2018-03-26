@@ -3,8 +3,22 @@
 <mapper namespace="cn.features.security.dao.UserDao">
 
     <sql id="userTable">
-        id, name
+        id, user_name, ctime, mtime
     </sql>
+
+    <insert id="addUser">
+        INSERT INTO
+          sys.user
+          (id, user_name, passwor, ctime)
+        VALUES
+          (#{id}, #{userName}, #{password}, now())
+    </insert>
+
+    <delete id="removeUserById">
+        UPDATE sys.user SET
+            delete = TRUE
+        WHERE id = #{id}
+    </delete>
 
     <select id="listUserByGroup" resultType="user">
         SELECT
@@ -12,8 +26,21 @@
         FROM
           sys.user AS u
         JOIN
-          sys.user_group AS ug ON u.id = ug.user_id
+          sys.user_group_associate AS ug ON u.id = ug.user_id
         WHERE
-        group_id = #{userGroup}
+        group_id = #{groupId}
+        AND deleted = FALSE
     </select>
+
+    <select id="getUserByName" resultType="user">
+        SELECT
+          <include refid="userTable"/>
+        FROM
+          sys.user u
+        JOIN sys.user_group_associate uga
+        ON u.id = uga.user_id
+        AND deleted = FALSE
+    </select>
+
+
 </mapper>

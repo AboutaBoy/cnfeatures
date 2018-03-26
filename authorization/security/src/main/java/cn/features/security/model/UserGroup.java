@@ -6,17 +6,17 @@ import lombok.EqualsAndHashCode;
 import org.apache.ibatis.type.Alias;
 
 /**
- * 用户
+ * 用户组
  *
  * @author limouren
  */
 @Data
-@Alias("user")
+@Alias("userGroup")
 @EqualsAndHashCode(callSuper = true)
-public class User extends Base {
+public class UserGroup extends Base {
 
-    private String userName;
+    private String groupName;
 
-    private String password;
+    private String parentId;
 
 }

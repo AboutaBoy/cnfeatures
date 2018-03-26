@@ -5,18 +5,13 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.apache.ibatis.type.Alias;
 
-/**
- * 用户
- *
- * @author limouren
- */
 @Data
-@Alias("user")
+@Alias("userGroupAssociate")
 @EqualsAndHashCode(callSuper = true)
-public class User extends Base {
+public class UserGroupAssociate extends Base {
 
-    private String userName;
+    private String userId;
 
-    private String password;
+    private String groupId;
 
 }

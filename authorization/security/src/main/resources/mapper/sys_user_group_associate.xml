@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.features.security.dao.UserGroupAssociateDao">
+
+    <sql id="ugaTable">
+        id, user_id, group_id, ctime, mtime
+    </sql>
+
+    <insert id="addUserGroupAssociate">
+        INSERT INTO sys.user_group_associate
+          (id, user_id, group_id, ctime)
+        VALUES
+          (#{id}, #{userId}, #{groupId}, now())
+    </insert>
+
+    <delete id="removeUserGroupAssociate">
+        DELETE FROM sys.user_group_associate
+        WHERE id = #{id}
+    </delete>
+
+    <select id="listUserGroupAssociate" resultType="userGroupAssociate">
+
+    </select>
+
+</mapper>
