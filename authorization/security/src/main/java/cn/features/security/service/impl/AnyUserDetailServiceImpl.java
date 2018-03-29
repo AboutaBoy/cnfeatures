@@ -1,33 +1,25 @@
 package cn.features.security.service.impl;
 
-import cn.features.common.service.UserService;
-import cn.features.security.service.AnyUserDetailService;
+import cn.features.security.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 /**
  * @author limouren
  */
 @Service
-public class AnyUserDetailServiceImpl implements UserDetailsService,AnyUserDetailService {
-
-//    @Autowired
-//    private UserService userService;
+public class AnyUserDetailServiceImpl implements UserDetailsService {
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
+    private UserService userService;
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return null;
+        return userService.getUserByName(username);
     }
 
-    @Override
-    public String encryptPassword(String password) {
-        return null;
-    }
 }

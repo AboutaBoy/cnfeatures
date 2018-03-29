@@ -1,10 +1,10 @@
 buildscript {
     ext {
-        springBootVersion = '1.5.9.RELEASE'
-        dependencyManagementVersion = '1.0.3.RELEASE'
+        springBootVersion = '2.0.0.RELEASE'
+        dependencyManagementVersion = '1.0.4.RELEASE'
     }
     repositories {
-        mavenLocal()
+        mavenCentral()
         maven {
             url "http://maven.aliyun.com/nexus/content/groups/public/"
         }
@@ -32,10 +32,9 @@ subprojects {
     apply plugin: 'io.spring.dependency-management'
     apply plugin: 'org.springframework.boot'
 
-    sourceCompatibility = 1.9
-    targetCompatibility = 1.9
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
     [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-
     // 远程仓库设置为阿里
     repositories {
         // 如果存在maven本地仓库,优先使用maven仓库的包,没有才下载
@@ -51,6 +50,8 @@ subprojects {
         druidVersion = '1.1.2'
         pagehelperSpringBootVersion = '1.2.1'
         mapperSpringBootVersion = '1.1.4'
+        commonsLang3Version = '3.5'
+        guavaVersion = '19.0'
     }
 
     dependencyManagement {

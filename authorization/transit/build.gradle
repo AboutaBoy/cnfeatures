@@ -1,4 +1,7 @@
 
 dependencies {
+    compile project(':authorization:authorization-security')
+    compile project(':authorization:authorization-shiro')
+
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }

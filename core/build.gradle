@@ -5,9 +5,7 @@ description = "主程序入口模块"
 
 dependencies {
     compile project(':common')
-    compile project(':authorization')
-    // spring framework 启动器
-    compile "org.springframework.boot:spring-boot-starter-mobile"
+    compile project(':authorization:authorization-transit')
     // swagger config for API UI
     compile "io.springfox:springfox-swagger2:${swaggerVersion}"
     compile "io.springfox:springfox-swagger-ui:${swaggerVersion}"

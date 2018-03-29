@@ -9,12 +9,16 @@ dependencies {
     // logback
     compile "ch.qos.logback:logback-classic"
 
+    // tools
+    compile "org.apache.commons:commons-lang3:${commonsLang3Version}"
+    compile "com.google.guava:guava:${guavaVersion}"
+
     // ORM框架mybatis
     compile "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisVersion}"
     // mybatis分页插件
-    compile "com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelperSpringBootVersion}"
+    //compile "com.github.pagehelper:pagehelper-spring-boot-starter:${pagehelperSpringBootVersion}"
     // mybatis mapper插件
-    compile "tk.mybatis:mapper-spring-boot-starter:${mapperSpringBootVersion}"
+    //compile "tk.mybatis:mapper-spring-boot-starter:${mapperSpringBootVersion}"
 
     // tools
     compile "org.projectlombok:lombok:${lombokVersion}"

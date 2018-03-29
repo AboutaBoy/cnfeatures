@@ -3,7 +3,7 @@
 <mapper namespace="cn.features.security.dao.UserDao">
 
     <sql id="userTable">
-        id, user_name, ctime, mtime
+        u.id, u.user_name, u.delete, u.ctime, u.mtime
     </sql>
 
     <insert id="addUser">
@@ -29,7 +29,7 @@
           sys.user_group_associate AS ug ON u.id = ug.user_id
         WHERE
         group_id = #{groupId}
-        AND deleted = FALSE
+        AND u.delete = FALSE
     </select>
 
     <select id="getUserByName" resultType="user">
@@ -39,7 +39,8 @@
           sys.user u
         JOIN sys.user_group_associate uga
         ON u.id = uga.user_id
-        AND deleted = FALSE
+        WHERE u.user_name = #{name}
+        AND u.delete = FALSE
     </select>
 
 

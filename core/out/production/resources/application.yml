@@ -6,7 +6,7 @@ system:
 # 目前使用h2内存数据库
 spring:
   datasource:
-    url: "${DATASOURCE_URL:jdbc:localhost:5432/features?useAffectedRows=true}"
+    url: "${DATASOURCE_URL:jdbc:postgresql://localhost:5432/features?useAffectedRows=true}"
     username: "${DATASOURCE_USERNAME:postgres}"
     password: "${DATASOURCE_PASSWORD:test}"
     driver-class-name: org.postgresql.Driver
@@ -17,15 +17,6 @@ mybatis:
   mapper-locations: "classpath*:/mapper/*.xml"
   type-aliases-package: "tk.mybatis.mapper.entity"
 
-mapper:
-  mappers: "tk.mybatis.mapper.common.Mapper"
-  not-empty: false
-  identity: POSTGRESQL
-
-pagehelper:
-  reasonable: true
-  support-methods-arguments: true
-  params: count=countSql
 
 
 

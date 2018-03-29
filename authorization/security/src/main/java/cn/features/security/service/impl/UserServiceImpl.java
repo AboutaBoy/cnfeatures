@@ -1,8 +1,16 @@
 package cn.features.security.service.impl;
 
+import cn.features.common.util.UUIDUtils;
+import cn.features.security.vo.UserUpVo;
+import cn.features.security.dao.UserDao;
+import cn.features.security.model.User;
 import cn.features.security.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * 用户服务实现层
@@ -13,4 +21,29 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
+    @Autowired
+    private UserDao userDao;
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Override
+    public User getUserByName(String name) {
+        return userDao.getUserByName(name);
+    }
+
+    @Override
+    public int addUser(UserUpVo userUpVo) {
+        User user = new User();
+        user.setId(UUIDUtils.timeBasedStr());
+        user.setUserName(userUpVo.getUserName());
+        user.setPassword(passwordEncoder.encode(userUpVo.getPassword()));
+        return userDao.addUser(user);
+
+    }
+
+    @Override
+    public List<User> listUserByGroup(String groupId) {
+        return userDao.listUserByGroup(groupId);
+    }
 }

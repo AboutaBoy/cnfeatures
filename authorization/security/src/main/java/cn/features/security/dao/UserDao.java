@@ -23,24 +23,26 @@ public interface UserDao {
 
     /**
      * 查询当前用户组里的name的用户信息
+     *
      * @param name 用户名
-     * @param groupId 用户组
      * @return 返回用户信息
      */
-    User getUserByName(String name, String groupId);
+    User getUserByName(String name);
 
     /**
      * 新增用户
-     * @param user
-     * @return
+     *
+     * @param user 用户
+     * @return 新增个数
      */
     int addUser(User user);
 
     /**
      * 删除用户
-     * @param id
-     * @return
+     *
+     * @param id 用户ID
+     * @return 返回删除个数
      */
-    int removeUserById(String id, String groupId);
+    int removeUserById(String id);
 
 }
