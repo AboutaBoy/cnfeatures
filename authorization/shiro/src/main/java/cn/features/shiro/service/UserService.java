@@ -1,8 +1,6 @@
-package cn.features.security.service;
+package cn.features.shiro.service;
 
 import cn.features.common.model.User;
-import cn.features.security.model.SecurityUser;
-import cn.features.security.vo.UserUpVo;
 
 import java.util.List;
 
@@ -19,15 +17,8 @@ public interface UserService {
      * @param name 用户名
      * @return 返回用户信息
      */
-    SecurityUser getUserByName(String name);
+    User getUserByName(String name);
 
-    /**
-     * 新增用户
-     *
-     * @param user 用户
-     * @return 返回新增个数
-     */
-    int addUser(UserUpVo user);
 
     /**
      * 根据用户组id查询用户

@@ -1,4 +1,4 @@
-package cn.features.security.dao;
+package cn.features.common.dao;
 
 import cn.features.security.model.UserGroupAssociate;
 import org.apache.ibatis.annotations.Mapper;

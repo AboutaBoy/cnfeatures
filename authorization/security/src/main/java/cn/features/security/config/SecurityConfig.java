@@ -32,7 +32,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     };
 
     private static final String[] NON_TOKEN_STATIC_ENTRY = new String[]{
-            "/static/**", "/**/*.js", "/**/*.css", "/**/*.html", "/**/*.html", "/favicon.ico"
+            "/static/**", "/**/*.js", "/**/*.css", "/**/*.html", "/favicon.ico"
     };
 
     @Autowired
@@ -41,12 +41,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * 使用 Spring Security 包中的 <a href="https://en.wikipedia.org/wiki/Bcrypt">Bycrpt</a> 工具
-     * 编码密码. 在其他类中，可以通过 自动注入的方式，使用 PasswordEncoder.登录时密码需要加密
+     * 编码密码. 在其他类中，可以通过 自动注入的方式，使用 PasswordEncoder.登录时密码需要加密.
      *
      * @return 密码编码器
      */
     @Bean
     public PasswordEncoder passwordEncoder() {
+        //todo shiro与spring security互通加密方式需保持一至
         return new BCryptPasswordEncoder();
     }
 

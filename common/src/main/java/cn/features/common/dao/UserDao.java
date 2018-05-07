@@ -1,6 +1,6 @@
-package cn.features.security.dao;
+package cn.features.common.dao;
 
-import cn.features.security.model.User;
+import cn.features.common.model.User;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

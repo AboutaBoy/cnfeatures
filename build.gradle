@@ -51,7 +51,8 @@ subprojects {
         pagehelperSpringBootVersion = '1.2.1'
         mapperSpringBootVersion = '1.1.4'
         commonsLang3Version = '3.5'
-        guavaVersion = '19.0'
+        guavaVersion = '24.1-jre'
+        shiroVersion = '1.4.0-RC2'
     }
 
     dependencyManagement {

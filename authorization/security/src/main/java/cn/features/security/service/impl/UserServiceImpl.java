@@ -1,9 +1,10 @@
 package cn.features.security.service.impl;
 
+import cn.features.common.model.User;
 import cn.features.common.util.UUIDUtils;
+import cn.features.security.model.SecurityUser;
 import cn.features.security.vo.UserUpVo;
-import cn.features.security.dao.UserDao;
-import cn.features.security.model.User;
+import cn.features.common.dao.UserDao;
 import cn.features.security.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,8 @@ public class UserServiceImpl implements UserService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public User getUserByName(String name) {
-        return userDao.getUserByName(name);
+    public SecurityUser getUserByName(String name) {
+        return (SecurityUser) userDao.getUserByName(name);
     }
 
     @Override

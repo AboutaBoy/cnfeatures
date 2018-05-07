@@ -1,6 +1,5 @@
-package cn.features.security.model;
+package cn.features.common.model;
 
-import cn.features.common.model.Base;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.apache.ibatis.type.Alias;

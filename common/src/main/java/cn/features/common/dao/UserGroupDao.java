@@ -1,7 +1,7 @@
-package cn.features.security.dao;
+package cn.features.common.dao;
 
-import cn.features.security.model.UserGroup;
-import cn.features.security.po.UserGroupPo;
+import cn.features.common.model.UserGroup;
+import cn.features.common.po.UserGroupPo;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
